@@ -14,5 +14,25 @@
 package main
 
 func findDisappearedNumbers(nums []int) []int {
+	var desiredIdx int
+	for _, n := range nums {
+		if n < 0 {
+			desiredIdx = -n - 1
+		} else {
+			desiredIdx = n - 1
+		}
 
+		if nums[desiredIdx] > 0 {
+			nums[desiredIdx] *= -1
+		}
+	}
+
+	res := make([]int, 0)
+	for i, n := range nums {
+		if n > 0 {
+			res = append(res, i+1)
+		}
+	}
+
+	return res
 }
