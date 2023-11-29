@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 // 448. Find All Numbers Disappeared in an Array
 //
 // Given an array nums of n integers where nums[i] is in the range [1, n],
@@ -11,7 +12,7 @@
 // Input: nums = [1,1]
 // Output: [2]
 
-package main
+package easy
 
 func findDisappearedNumbers(nums []int) []int {
 	var desiredIdx int

@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/island-perimeter/
 // 463. Island Perimeter
 //
 // You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water.
@@ -10,43 +11,26 @@
 // Output: 16
 // Explanation: The perimeter is the 16 yellow stripes in the image above.
 
-package main
+package easy
 
 func islandPerimeter(grid [][]int) int {
-	var per int
+	lands := 0
+	neighbourings := 0
 
-	for row, lay := range grid {
-		for col, surf := range lay {
-			if surf == 1 {
-				per += getBord(grid, col, row, 0, -1)
-				per += getBord(grid, col, row, 1, 0)
-				per += getBord(grid, col, row, 0, 1)
-				per += getBord(grid, col, row, -1, 0)
+	for row := range grid {
+		for col := range grid[row] {
+			if grid[row][col] == 1 {
+				lands += 1
+
+				if (row < len(grid)-1) && (grid[row+1][col] == 1) {
+					neighbourings += 1
+				}
+				if (col < len(grid[row])-1) && (grid[row][col+1] == 1) {
+					neighbourings += 1
+				}
 			}
 		}
 	}
 
-	return per
-}
-
-func getBord(grid [][]int, xCur int, yCur int, xBias int, yBias int) int {
-	xTar := xCur + xBias
-	if xTar < 0 {
-		return 1
-	} else if xTar >= len(grid[0]) {
-		return 1
-	}
-
-	yTar := yCur + yBias
-	if yTar < 0 {
-		return 1
-	} else if yTar >= len(grid) {
-		return 1
-	}
-
-	if grid[yTar][xTar] == 1 {
-		return 0
-	} else {
-		return 1
-	}
+	return 4*lands - 2*neighbourings
 }

@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/missing-number/
 // 268. Missing Number
 //
 // Given an array nums containing n distinct numbers in the range [0, n],
@@ -18,23 +19,23 @@
 // Output: 8
 // Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
 
-package main
+package easy
 
 func missingNumber(nums []int) int {
-    numsLen := len(nums)
+	numsLen := len(nums)
 
-    // arithmetic progression from 0 to n 
-    fullSum := numsLen * (1 + numsLen) / 2
+	// arithmetic progression from 0 to n
+	fullSum := numsLen * (1 + numsLen) / 2
 
-    realSum := sum(nums) 
+	realSum := sum(nums)
 
-    return fullSum - realSum
+	return fullSum - realSum
 }
 
-func sum (nums []int) (s int) {
-    for _, n := range nums {
-        s += n
-    }
+func sum(nums []int) (s int) {
+	for _, n := range nums {
+		s += n
+	}
 
-    return s
+	return s
 }

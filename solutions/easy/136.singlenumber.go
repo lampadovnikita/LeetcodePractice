@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/single-number/
 // 136. Single Number
 //
 // Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
@@ -15,7 +16,7 @@
 // Input: nums = [1]
 // Output: 1
 
-package main
+package easy
 
 func singleNumber(nums []int) int {
 	var res int

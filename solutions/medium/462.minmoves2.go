@@ -15,7 +15,7 @@
 // Input: nums = [1,10,2,9]
 // Output: 16
 
-package main
+package medium
 
 import (
 	"sort"

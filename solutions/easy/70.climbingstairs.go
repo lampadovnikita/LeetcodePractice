@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/climbing-stairs/
 // 70. Climbing Stairs
 //
 // You are climbing a staircase. It takes n steps to reach the top.
@@ -18,7 +19,7 @@
 // 2. 1 step + 2 steps
 // 3. 2 steps + 1 step
 
-package main
+package easy
 
 // n1 - the number of ways to climb 2 steps above
 // n2 - the number of ways to climb 1 step above
