@@ -1,6 +1,8 @@
-# LeetcodePractice
+# leetcodepractice
+This repository contains my solutions to tasks from [LeetCode](https://leetcode.com/). Problems solved using the Go programming language.
 
-## Solved tasks
+## Solutions
 
-* [Easy](https://github.com/lampadovnikita/leetcodepractice/tree/main/solutions/easy)
-* [Medium](https://github.com/lampadovnikita/leetcodepractice/tree/main/solutions/medium)
+[Easy level](https://github.com/lampadovnikita/leetcodepractice/tree/main/solutions/easy)  
+  
+[Medium level](https://github.com/lampadovnikita/leetcodepractice/tree/main/solutions/medium)
